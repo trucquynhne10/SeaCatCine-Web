@@ -1,0 +1,111 @@
+:root {
+    --content-width: 1200px;
+    --primary-blue: #0b2447;
+    --secondary-blue: #7eb9e3;
+    --fourth-blue: #aac5e7;
+    --yellow: #ffc436;
+    --third-blue: #627091;
+    --fifth-blue: #337ccf;
+    --gray-letter: #a5a7ae;
+}
+main {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.maintainer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(237, 227, 227);
+    width: var(--content-width);
+    border-radius: 5px;
+}
+.GroupVeImage {
+    display: flex;
+    color: #19376d;
+    font-size: 43px;
+    font-weight: bold;
+}
+.datve_khung {
+    width: 230px;
+    transform: translateY(-100px);
+}
+.datve_khung img {
+    width: 100%;
+}
+#datve {
+    transform: translateX(-50px);
+}
+.button-giave {
+    display: flex;
+    gap: 25px;
+    color: white;
+    transform: translateY(20px);
+}
+.button-giave-item {
+    height: 60px;
+    width: 150px;
+    background-color: var(--fifth-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+.KhungVe2D,
+.KhungVe3D {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.KhungVe2D {
+    display: none;
+}
+.ghichu {
+    padding: 10px;
+}
+.button-2d {
+    position: relative;
+}
+.button-2d::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(100% + 2px);
+    height: calc(100% + 0px);
+    width: 27px;
+    background-color: var(--fifth-blue);
+    transform: skew(-15deg) translateX(-20px);
+    /* z-index: -1; */
+    border-radius: 5px 5px 5px 5px;
+}
+.button-3d {
+    position: relative;
+}
+.button-3d::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(100% + 2px);
+    height: calc(100% + 0px);
+    width: 27px;
+    background-color: var(--fifth-blue);
+    transform: skew(-15deg) translateX(-160px);
+    /* z-index: -1; */
+    border-radius: 5px 5px 5px 5px;
+}
+.button-giave-item.active,
+.button-giave-item.active::after,
+.button-giave-item:hover,
+.button-giave-item:hover::after {
+    background-color: var(--yellow);
+    color: black;
+}

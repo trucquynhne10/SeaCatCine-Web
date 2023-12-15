@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+                box-sizing: border-box;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                width: 900px;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(207, 200, 200);
+                gap: 20px;
+            }
+            .comment {
+                display: flex;
+                background-color: rgb(239, 231, 231);
+                padding: 30px;
+                gap: 30px;
+            }
+            .name {
+                color: blue;
+                width: 150px;
+            }
+
+            .show-button {
+                padding: 10px;
+                cursor: pointer;
+            }
+            .comment-wrapper{
+                gap: 20px;
+                display: flex;
+                flex-direction: column;
+                padding: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="comment-wrapper">
+                <!-- <div class="comment">
+                    <div class="name">abc</div>
+                    <div class="comment-content">đây là bình luận</div>
+                </div> 
+                js sẽ ghi đè vào đây-->
+            </div>
+            <div class="show-button">show</div>
+        </div>
+        <script>
+            const COMMENTS = [
+                {
+                    avatar: 'images/avt-quan.jpg',
+                    name: 'Tui là Quân nè',
+                    date: '02/11/2023',
+                    rating: 10,
+                    review: 'Phim hay, coi ngủ không nhưng mà hay, 10 đỉm không có nhưng =))) Mọi người nên đi để xem nghe, không uổng tiền đâu.',
+                    likes: '2.9k',
+                    comments: '10'
+                },
+                {
+                    avatar: 'images/avt_Ly.jpg',
+                    name: 'LyLy',
+                    date: '10/11/2023',
+                    rating: 5,
+                    review: 'Cũng được được, ổn ổn, 5đ',
+                    likes: '5k',
+                    comments: '100'
+                },
+                {
+                    avatar: 'images/avt_todi.jpg',
+                    name: 'Tô Di',
+                    date: '02/11/2023',
+                    rating: 3,
+                    review: 'Cũng ổn, nhưng hôm nay chị đói chị cộc nên 3 điểm đủ r',
+                    likes: '7.9k',
+                    comments: '320'
+                },
+                {
+                    avatar: 'images/avt_vu.png',
+                    name: 'Lươn Vũ',
+                    date: '07/11/2023',
+                    rating: 4,
+                    review: 'Phim hay đó, kịch tính nên a cho 4đ :))',
+                    likes: '4.7k',
+                    comments: '69'
+                },
+                {
+                    avatar: 'images/avt_quynh.jpg',
+                    name: 'Quỳnh',
+                    date: '02/11/2023',
+                    rating: 8,
+                    review: 'Mình ít khi xem phim Việt Nam. Trước khi xem mình ko đọc review hay bình luận gì về phim, có nghe ox nói phim này bị chê nhiều. Nhưng sau khi xem xong mình đánh giá đây là 1 bộ phim rất dở.',
+                    likes: '10.9k',
+                    comments: '1024'
+                },
+                {
+                    avatar: 'images/dv-thuannguyen.webp',
+                    name: 'Hải Nam',
+                    date: '11/11/2023',
+                    rating: 8,
+                    review: 'Phim như 1 định hải thần trâm mang đầy ý nghĩa và nhân văn giáng vào lòng e. Xem phim xong e chả rút ra đc gì cả :((',
+                    likes: '3k',
+                    comments: '120'
+                }
+            ]
+            //Duyệt comment vào
+            const viewMoreBtn = document.querySelector('.show-button')
+            const commentsContain = document.querySelector('.comment-wrapper')
+            let isViewMore = false
+
+            const renderComments = () => {
+                let commentsToShow = isViewMore
+                    ? COMMENTS
+                    : COMMENTS.slice(0, 3)
+
+                const commentsHTML = commentsToShow.map(
+                    (comment) => ` 
+                    <div class="comment">
+                <div class="name">${comment.name}</div>
+                <div class="comment-content">${comment.review}</div>
+            </div>
+
+        `
+                )
+
+                commentsContain.innerHTML = commentsHTML.join('')
+            }
+            renderComments()
+            viewMoreBtn.addEventListener('click', function () {
+                isViewMore = !isViewMore
+                this.innerText = isViewMore ? 'Hide' : 'Show'
+                renderComments()
+            })
+        </script>
+    </body>
+</html>

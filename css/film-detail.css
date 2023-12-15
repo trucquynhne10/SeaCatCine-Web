@@ -1,0 +1,546 @@
+:root {
+    --content-width: 1200px;
+    --primary-blue: #0b2447;
+    --secondary-blue: #7eb9e3;
+    --fourth-blue: #aac5e7;
+    --yellow: #ffc436;
+    --third-blue: #627091;
+    --fifth-blue: #337ccf;
+    --gray-letter: #a5a7ae;
+}
+* {
+    scroll-behavior: smooth;
+}
+#datve {
+    scroll-margin-top: 160px;
+}
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.inner-wrapper,
+.gioithieu,
+.lichchieu,
+.danhgia-phimdangchieu {
+    width: var(--content-width);
+}
+header,
+main,
+footer,
+.banner-wrapper {
+    width: 100%;
+}
+main,
+.banner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.banner {
+    width: 100%;
+    padding-top: 38%;
+    background: url('../images/nvcc_banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.55));
+}
+.banner .below-overlay {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0)
+    );
+    z-index: -1;
+
+    /* Khúc này là cái độ cao của phần bóng đen phủ xuống
+    nào code xong phần dưới thì chỉnh lại cho vừa */
+    height: 1000px;
+}
+.film-information {
+    margin-top: -230px;
+    z-index: 1;
+}
+.poster-film {
+    border: 4px solid var(--yellow);
+}
+.inner-wrapper {
+    display: flex;
+    color: white;
+    gap: 100px;
+    align-items: flex-start;
+}
+.play-btn {
+    height: 80px;
+    width: 80px;
+    transform: translateY(-400px);
+    background-color: var(--fourth-blue);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.play-btn i {
+    font-size: 50px;
+    color: white;
+    transform: translateX(5px);
+}
+h1 {
+    text-transform: uppercase;
+}
+h4 {
+    text-transform: uppercase;
+    color: var(--third-blue);
+}
+.info-tile {
+    color: var(--fourth-blue);
+    font-weight: bold;
+}
+.posterfilm-box {
+    display: flex;
+    gap: 20px;
+}
+.posterfilm-box-item,
+.posterfilm-box-item p {
+    border: 2px solid var(--fourth-blue);
+    width: 40px;
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #aac5e7;
+}
+.btn_datvengay button {
+    background-color: var(--fourth-blue);
+    border: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+}
+.dienvien {
+    display: flex;
+    flex-direction: column;
+    width: var(--content-width);
+}
+hr {
+    width: 200px;
+    border: 1px solid white;
+    margin-left: 0;
+    margin-bottom: 40px;
+}
+.dienvien-title,
+.gt-title,
+.lichchieu-title,
+.danhgia-title,
+.phimdangchieu-title {
+    color: white;
+    text-transform: uppercase;
+}
+.dv_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+.dv-img-item {
+    width: 180px;
+    height: 180px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+}
+.dv-img-item > img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+.danhgia_poster,
+.starscore,
+.starscore-canhan {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.danhgia_poster {
+    margin: 16px 0;
+    align-items: baseline;
+}
+.starscore i {
+    font-size: 26px;
+}
+.starscore span {
+    font-size: 35px;
+    color: white;
+}
+.danhgia_poster p {
+    margin: 0;
+}
+.gioithieu {
+    max-width: var(--content-width);
+}
+.giothieu-box {
+    position: relative;
+}
+.giothieu-box img {
+    display: block;
+    width: 100%;
+}
+.abs-content {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 67% 33%;
+}
+.abs-content .gioithieu-box-content {
+    padding: 60px;
+    color: white;
+}
+.abs-content .box-banvengay {
+    padding: 60px;
+    color: white;
+}
+.box-banvengay {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.box-banvengay button {
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid var(--secondary-blue);
+}
+.box-banvengay button a {
+    text-decoration: none;
+    color: var(--secondary-blue);
+}
+
+.box-banvengay-item {
+    width: 260px;
+    height: 40px;
+}
+.datve_wrapper {
+    background-color: var(--secondary-blue);
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    position: relative;
+    color: black;
+}
+.datve_wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(100% + 2px);
+    height: 100%;
+    width: 22px;
+    background-color: var(--secondary-blue);
+    transform: skew(-15deg) translateX(-10px);
+    /* z-index: -1; */
+    border-radius: 0 2px 2px 0;
+}
+.lichchieubox {
+    background-color: var(--primary-blue);
+}
+.lichieu-homnay {
+    padding: 10px 30px 50px;
+    display: flex;
+    gap: 20px;
+    height: 40px;
+}
+.lichchieu-item {
+    background-color: #7eb9e3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 60px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.lichchieu-item.passed {
+    background: black;
+    border: 2px solid var(--fifth-blue);
+    color: var(--fifth-blue);
+    cursor: not-allowed;
+}
+.lichchieu-ngaymai {
+    background-color: var(--fifth-blue);
+    color: white;
+}
+.lichchieu-ngaymai::after {
+    content: '';
+    position: absolute;
+    top: calc(100% - 1px);
+    right: 20px;
+    border: 10px solid;
+    border-color: var(--fifth-blue) transparent transparent transparent;
+}
+.lichchieu-ngay {
+    background-color: var(--yellow);
+}
+.lichchieu-ngay,
+.lichchieu-ngaymai {
+    /* background-color: var(--yellow); */
+    height: 30px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: translate(30px, -50%);
+}
+.lichchieu-ngay::after {
+    content: '';
+    position: absolute;
+    top: calc(100% - 1px);
+    right: 20px;
+    border: 10px solid;
+    border-color: var(--yellow) transparent transparent transparent;
+}
+.danhgia {
+    width: 75%;
+}
+.danhgia-content {
+    background-color: var(--primary-blue);
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+.danhgia-content p {
+    color: white;
+}
+.danhgia-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.filter-danhgia-btn {
+    background-color: var(--secondary-blue);
+    display: flex;
+    width: 130px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.filter-danhgia-btn select {
+    border: none;
+    background-color: transparent;
+}
+.danhgia-body {
+    border: dashed 2px var(--secondary-blue);
+    background-color: transparent;
+    padding: 20px;
+    margin: 20px;
+    stroke-dasharray: 10, 10;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.danhgia-body-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.avt-ten-ngay {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.ten-ngay span {
+    color: white;
+    font-weight: normal;
+}
+.ten-ngay {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 15px;
+}
+.starscore-canhan p {
+    font-weight: bold;
+    font-size: 12px;
+}
+.danhgia-canhan-frame {
+    background-color: var(--third-blue);
+    padding: 30px;
+    border-radius: 5px;
+}
+.icon-danhgia {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+.icon-danhgia i {
+    font-size: 26px;
+}
+.danhgia-canhan-frame {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.note-icon {
+    font-size: 10px;
+}
+.danhgia-phimdangchieu {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.phimdangchieu {
+    display: flex;
+    margin-left: 0;
+    flex-direction: column;
+    gap: 30px;
+}
+.phimdangchieu-poster {
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+}
+/* a{
+    color: white;
+    text-decoration: none;
+} */
+.myself-danhgia {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+    align-items: flex-end;
+}
+#comment-box {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding-left: 5px;
+}
+.frame-comment-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.frame-comment {
+    padding: 2px 20px 0;
+    background-color: var(--third-blue);
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+.frame-comment-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.star-rank {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    /* justify-content: space-between; */
+}
+.star-rank-item {
+    color: white;
+    height: 35px;
+    width: 55px;
+    background-color: #0b2447;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1.5px solid var(--third-blue);
+}
+.avt {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin-bottom: 6px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.avt img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+.fa-paper-plane {
+    color: white;
+    cursor: pointer;
+}
+#comment-box::placeholder {
+    color: white;
+}
+.xemthem {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.xemthem a {
+    color: white;
+}
+main {
+    padding-bottom: 40px;
+}
+a {
+    color: white;
+}
+.btn_datvengay > button > a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.star-rank-item:hover,
+.star-rank-item.active {
+    background-color: var(--third-blue);
+}
+textarea {
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    resize: none;
+}

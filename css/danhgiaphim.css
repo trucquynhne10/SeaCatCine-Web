@@ -1,0 +1,74 @@
+:root {
+    --content-width: 1200px;
+    --primary-blue: #0b2447;
+    --secondary-blue: #7eb9e3;
+    --fourth-blue: #aac5e7;
+    --yellow: #ffc436;
+    --third-blue: #627091;
+    --fifth-blue: #337ccf;
+    --gray-letter: #a5a7ae;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+.danhgiaphim-wrapper {
+    display: flex;
+    gap: 60px;
+}
+.danhgiaphim-wrap {
+    background-color: var(--primary-blue);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    gap: 20px;
+}
+.danhgia-sub {
+    display: flex;
+    gap: 10px;
+    background-color: var(--third-blue);
+    padding: 10px;
+    border-radius: 5px;
+}
+.danhgia-nd {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fourth-blue);
+    padding: 20px;
+    border-radius: 5px;
+}
+.danhgia-phimposter {
+    width: 350px;
+}
+.danhgia-phimposter img {
+    display: block;
+    border-radius: 5px;
+}
+.danhgia-dashed {
+    border-radius: 5px;
+    border: 1.5px dashed var(--yellow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.box-banvengay {
+    background-color: var(--primary-blue);
+    padding: 20px;
+    border-radius: 5px;
+    height: 300px;
+    position: sticky;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: var(--content-width);
+    gap: 0;
+}
+.danhgia-dashed {
+    padding: 20px;
+}
+.title {
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0;
+}

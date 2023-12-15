@@ -1,0 +1,183 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+:root {
+    --content-width: 1200px;
+    --primary-blue: #0b2447;
+    --secondary-blue: #7eb9e3;
+    --fourth-blue: #aac5e7;
+    --yellow: #ffc436;
+    --third-blue: #627091;
+    --fifth-blue: #337ccf;
+    --gray-letter: #a5a7ae;
+}
+.container {
+    display: flex;
+    background-color: #0c182d;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+.container-content {
+    width: var(--content-width);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.element-item {
+    font-weight: bold;
+}
+.phimTime {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.lichPhim-info-icon {
+    display: flex;
+    gap: 30px;
+}
+h2,
+.title-upercase {
+    text-transform: uppercase;
+}
+
+.today-item-lich-wrapper {
+    display: flex;
+    gap: 20px;
+}
+.lichPhim-item {
+    display: flex;
+    gap: 20px;
+    background-color: #4d628d;
+    padding: 20px;
+    height: 330px;
+    border-radius: 5px;
+    position: relative;
+}
+.film-poster {
+    max-height: 300px;
+    max-width: 220px;
+}
+.film-poster img {
+    max-width: 100%;
+}
+.lichPhim-container {
+    display: flex;
+    background-color: none;
+    border: 2px dashed var(--yellow);
+    padding: 40px;
+    border-radius: 5px;
+    flex-direction: column;
+    gap: 30px;
+}
+.lichPhim-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #aac5e7;
+    border-radius: 5px;
+    padding: 30px;
+    color: black;
+    width: 100%;
+}
+.title-upercase {
+    color: #627091;
+}
+.today-item-lich,
+.tomorrow-item-lich,
+.dayAfter-tmr-item-lich {
+    background-color: whitesmoke;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 110px;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+.today-item-lich.active,
+.tomorrow-item-lich.active,
+.dayAfter-tmr-item-lich.active {
+    background-color: #aac5e7;
+}
+.today-item-lich.active .Thu {
+    background-color: #4d628d;
+    color: white;
+    box-sizing: border-box;
+}
+.Thu {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+}
+.Ngay {
+    font-size: 45px;
+    line-height: 45px;
+}
+.age {
+    background-color: black;
+    color: var(--yellow);
+    width: 50px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 110px;
+    box-shadow: -1px 3px 4px rgba(0, 0, 0, 0.9);
+}
+.ngaychieu {
+    background-color: #627091;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 45px;
+    box-shadow: -1px 3px 4px rgba(0, 0, 0, 0.9);
+    line-height: 20px;
+}
+hr {
+    width: 30px;
+}
+.ngaychieu-ngay {
+    font-size: 22px;
+}
+.phimTime-item.passed {
+    height: 30px;
+    width: 60px;
+    background-color: black;
+    border-color: #4d628d;
+    color: #4d628d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    cursor: not-allowed;
+}
+.phimTime-item {
+    height: 30px;
+    width: 60px;
+    background-color: #4d628d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+.phimTime-item a {
+    text-decoration: none;
+    color: white;
+}
