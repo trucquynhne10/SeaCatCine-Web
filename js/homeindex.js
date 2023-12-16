@@ -111,7 +111,7 @@ const renderFilms = (type) => {
                 <img src="${film.img}" alt="">
             </div>
             <div class = "danhgiaphim-content-read ">
-            <a href="danhgiaphim.html"><p class = "title">${film.title}</p></a>
+            <a href="thanhvien.html"><p class = "title">${film.title}</p></a>
             <span>${film.content}</span>
             </div>
         </div>
