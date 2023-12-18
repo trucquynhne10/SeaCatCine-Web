@@ -126,7 +126,7 @@ const redirectUserIfChoseAll = () => {
     const isFull = [...document.querySelectorAll('.picker')].every(
         (el) => el.dataset.choice != undefined
     )
-    if (isFull) window.location.href = 'muave.html'
+    if (isFull) window.location.href = 'muave-book.html'
 }
 
 
