@@ -1,0 +1,393 @@
+.noti {
+    position: relative;
+}
+
+.notification-box {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    width: 230px;
+    z-index: 200;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #1b8bcb;
+    text-align: left;
+}
+
+.noti-box-title {
+    color: #D0011B;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.noti-header {
+    color: #1B8BCB;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.noti-content {
+    color: black;
+    text-align: left;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+#offcanvasExample {
+    width: 250px;
+}
+
+#offcanvasExampleLabel {
+    color: #4da2d3;
+    font-weight: bold;
+    font-family: 'Inter';
+}
+
+.offcanvas-header {
+    padding-bottom: 0px;
+}
+
+.offcanvas-body {
+    padding-top: 0px;
+}
+
+.list-group-item {
+    border: none;
+    padding: 8px 8px;
+    margin: 0px 30px;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.current-page {
+    border-bottom: 5px solid #1B8BCB;
+}
+
+.current-page a {
+    color: #1B8BCB;
+    font-weight: bold;
+}
+
+
+.payment {
+    margin: 15px 0px 20px 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.payment-btn {
+    box-sizing: border-box;
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: #D0011B;
+    color: white;
+    font-weight: bold;
+    margin-right: 65px;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.payment-btn:hover {
+    background-color: white;
+    border: 2px solid #D0011B;
+    color: #D0011B;
+}
+
+.cart-recommend {
+    border-left: 1px dashed #8b8686;
+}
+
+.recommend-books .product-item {
+    width: 180px;
+    margin: 10px;
+}
+
+.hidden1,
+.hidden2 {
+    display: none;
+}
+
+/* End cart page */
+
+/* Payment infomation page */
+.payment-container {
+    background-color: white;
+    padding: 16px 50px 20px 50px;
+    border-radius: 10px;
+    margin-top: 5px;
+    width: 1200px;
+}
+
+.payment-noti-text {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.payment-title-box {
+    margin-top: -5px;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    margin-left: -2px;
+}
+
+.payment-form-container {
+    margin: auto;
+}
+
+.form-grid-container {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-row-gap: 5px;
+    column-gap: 5px;
+    margin-bottom: 16px;
+}
+
+.form-grid-container input {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 30px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.payment-info-header {
+    font-weight: bold;
+    font-size: 17px;
+    color: #1B8BCB;
+    border-bottom: 1px solid #e9ebee;
+}
+
+/* Ẩn radio button mặc định */
+input[type="radio"] {
+    display: none;
+}
+
+/* Kiểu cho radio button tùy chỉnh */
+.shipping-radio {
+    display: inline-block;
+    position: relative;
+    margin-right: 50px;
+    /* Khoảng cách giữa các radio button */
+    margin-bottom: 5px;
+}
+
+.payment-method-radio {
+    position: relative;
+    margin-right: 50px;
+    /* Khoảng cách giữa các radio button */
+    margin-bottom: 5px;
+}
+
+.shipping-radio input[type="radio"]+label,
+.payment-method-radio input[type="radio"]+label {
+    position: relative;
+    padding-left: 35px;
+    /* Khoảng cách giữa radio button và label */
+    cursor: pointer;
+}
+
+.shipping-radio input[type="radio"]+label::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 18px;
+    /* Kích thước radio button */
+    height: 18px;
+    /* Kích thước radio button */
+    border: 2px solid #000;
+    /* Đường viền */
+    padding: 3px;
+    border-radius: 50%;
+    /* Để tạo hình tròn */
+}
+
+.payment-method-radio input[type="radio"]+label::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 18px;
+    /* Kích thước radio button */
+    height: 18px;
+    /* Kích thước radio button */
+    border: 2px solid #000;
+    /* Đường viền */
+    padding: 3px;
+    border-radius: 50%;
+    /* Để tạo hình tròn */
+}
+
+/* Khi radio button được chọn */
+.shipping-radio input[type="radio"]:checked+label::before,
+.payment-method-radio input[type="radio"]:checked+label::before {
+    border: 2px solid #D0011B;
+    background-color: #D0011B;
+    /* Màu khi được chọn */
+    box-shadow: inset 0 0 0 2px #fff;
+    /* Tạo khoảng trống */
+}
+
+.payment-method-img {
+    width: 35px;
+    height: 25px;
+    object-fit: contain;
+    border: 1px solid #f0f0f0;
+    border-radius: 2px;
+    margin-left: 5px;
+}
+
+
+/* Check box */
+.other-info {
+    margin-bottom: 30px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+input[type="checkbox"] {
+    display: none;
+    /* Ẩn checkbox mặc định */
+}
+
+input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #cdcdcd;
+}
+
+input[type="checkbox"]:checked+label::before {
+    content: '\2713';
+    /* Unicode của dấu checkmark */
+    color: white;
+    background-color: #1b8bcb;
+    ;
+    font-size: 20px;
+    line-height: 18px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.checkout-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 20px 20px 20px;
+    background: #FFF;
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0px;
+    padding: 30px 0px;
+}
+
+.checkout-box a {
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+}
+
+.payment-to-cart:hover {
+    color: #1B8BCB;
+}
+
+.checkout-box img {
+    margin-right: 15px;
+}
+
+.checkout-box button {
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: #D0011B;
+    color: white;
+    padding: 15px 20px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.checkout-box button:hover {
+    background-color: white;
+    color: #D0011B;
+    border: 2px solid #D0011B;
+}
+
+
+.email-container {
+    position: relative;
+    height: 100px;
+    top: 50px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* background-image: url(../assets/email_subscriber.jpg); */
+    border-radius: 10px;
+    border: 1px solid #1b8bcb;
+    z-index: 1;
+}
+
+.email-bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-image: url('../assets/email_subscriber.jpg');
+    opacity: 0.3;
+    text-align: unset;
+    border-radius: 10px;
+    z-index: -100;
+}
+
+.email-container p {
+    text-align: center;
+    font-size: large;
+    color: #D0011B;
+    font-weight: bold;
+    margin: 8px 0px;
+}
+
+.email-input {
+    width: 40%;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.email-sub {
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+.email-btn {
+    padding: 5px 20px;
+    border: none;
+    font-weight: bold;
+    background-color: #1B8BCB;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.email-btn:hover {
+    background-color: #1277b3;
+}

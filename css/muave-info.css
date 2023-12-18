@@ -1,0 +1,11 @@
+.dat-ve{
+    height: 400px;
+}
+.title-datve img {
+    transform: translateY(50px);
+    width: 130px;
+    height: 130px;
+}
+.datve-content{
+    padding-top: 100px;
+}
