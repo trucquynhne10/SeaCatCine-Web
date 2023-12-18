@@ -21,16 +21,9 @@ availableSeats.forEach((seat) => {
 })
 
 // Book seats
-bookBtn.addEventListener('click', function () {
-    const selectedSeats = document.querySelectorAll(
-        '.grid-item.selected:not(.booked)'
-    )
-    const agree = confirm('Bạn đồng ý thanh toán?')
-    if (agree) {
-        selectedSeats.forEach((seat) => seat.classList.add('booked'))
-        showSelectedSeats()
-    }
-})
+const payment = document.querySelector('.payment-container')
+const container_booking = document.querySelector('.container-booking')
+const done_payment = document.querySelector('.done-payment')
 
 const currencyFormatter = (money) =>
     new Intl.NumberFormat('vi-VN', {
@@ -40,11 +33,14 @@ const currencyFormatter = (money) =>
 
 const SINGLE_SEAT_PRICE = 50000
 const COUPLE_SEAT_PRICE = 105000
+let singleSeats = 0
+let coupleSeats = 0
 
 const showSelectedSeats = () => {
+    singleSeats = 0
+    coupleSeats = 0
+
     let selectedSeatsHTML = ''
-    let singleSeats = 0
-    let coupleSeats = 0
 
     const selectedSeats = document.querySelectorAll(
         '.grid-item.selected:not(.booked)'
@@ -75,3 +71,35 @@ const showSelectedSeats = () => {
         singleSeats * SINGLE_SEAT_PRICE + coupleSeats * COUPLE_SEAT_PRICE
     )
 }
+
+bookBtn.addEventListener('click', function () {
+    if (singleSeats == 0 && coupleSeats == 0) {
+        confirm('Vui lòng chọn ghế')
+    } else {
+        const selectedSeats = document.querySelectorAll(
+            '.grid-item.selected:not(.booked)'
+        )
+        const agree = confirm('Bạn đồng ý thanh toán?')
+        if (agree) {
+            payment.style.display = 'block'
+            container_booking.style.display = 'none'
+        }
+        const ghethuonghd = document.querySelector('.ghethuong_hd')
+        const ghedoihd = document.querySelector('.ghedoi_hd')
+        const tonghd = document.querySelector('.tong_hd')
+        ghethuonghd.innerText = singleSeats
+        ghedoihd.innerText = coupleSeats
+        tonghd.innerText = currencyFormatter(
+            singleSeats * SINGLE_SEAT_PRICE + coupleSeats * COUPLE_SEAT_PRICE
+        )
+        done_payment.addEventListener('click', function () {
+            alert('Mua vé thành công')
+            container_booking.style.display = 'flex'
+            payment.style.display = 'none'
+            selectedSeats.forEach((seat) => seat.classList.add('booked'))
+            singleSeats = 0
+            coupleSeats = 0
+            showSelectedSeats()
+        })
+    }
+})
