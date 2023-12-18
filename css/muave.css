@@ -300,4 +300,18 @@ main {
     box-shadow: 0 10px 40px 10px var(--yellow);
     background-color: transparent;
 }
-
+.payment-container{
+    display: none;
+}
+.container-booking{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container-booking .overlay {
+    background: rgba(0, 0, 0, 0.75);
+}
+.tong_hd{
+    font-weight: bold;
+    color: #D0011B;
+}
