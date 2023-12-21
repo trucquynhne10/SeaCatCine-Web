@@ -53,9 +53,10 @@ footer > div {
     gap: 20px;
 }
 .logo {
-    max-width: 170px;
+    max-width: 200px;
     flex-shrink: 0;
     cursor: pointer;
+    margin-right: 70px;
 }
 .logo img {
     width: 100%;
@@ -69,6 +70,7 @@ footer > div {
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    width: 1200px;
 }
 .search-bar {
     padding: 0 10px;
