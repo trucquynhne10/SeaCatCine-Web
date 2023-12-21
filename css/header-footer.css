@@ -47,7 +47,7 @@ header {
 }
 nav,
 footer > div {
-    width: var(--content-width);
+    width: 1440px;
     padding-top: 10px;
     display: flex;
     gap: 20px;
