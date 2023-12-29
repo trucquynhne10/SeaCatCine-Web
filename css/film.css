@@ -89,13 +89,19 @@ main {
     background-color: var(--yellow);
     color: black;
 }
-.head-title {
+.head-title2 {
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: -70px;
 }
+
+.head-title2 a {
+    text-decoration: none;
+}
+
 .phimdangchieu::after {
     content: '';
     position: absolute;
