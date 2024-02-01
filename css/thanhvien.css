@@ -1,0 +1,9 @@
+﻿.dangkytv {
+    width: 300px;
+    margin-left: 15px;
+    margin-top: 60px;
+    height: 140px;
+    position: absolute;
+    display: flex;
+    transform: rotate(-30deg);
+}

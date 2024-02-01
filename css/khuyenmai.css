@@ -1,0 +1,86 @@
+:root {
+    --content-width: 1200px;
+    --primary-blue: #0b2447;
+    --secondary-blue: #7eb9e3;
+    --fourth-blue: #aac5e7;
+    --yellow: #ffc436;
+    --third-blue: #627091;
+    --fifth-blue: #337ccf;
+}
+body {
+    color: black;
+}
+.Sukien {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-blue);
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.Event {
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+}
+.KhungVangEvent {
+    border: 3px dashed var(--yellow);
+    transform: translateX(-60px);
+}
+.event-img {
+    z-index: 2;
+}
+.event-img img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+.Event_Content {
+    background-color: var(--fourth-blue);
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+.SukienTitle {
+    color: white;
+    font-size: 35px;
+}
+.phimdangchieu-title {
+    color: white;
+    text-transform: uppercase;
+}
+.phimdangchieu {
+    display: flex;
+    margin-left: 0;
+    flex-direction: column;
+    gap: 30px;
+}
+.phimdangchieu-poster {
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    width: var(--content-width);
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.xemthem {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.xemthem a {
+    color: white;
+}
